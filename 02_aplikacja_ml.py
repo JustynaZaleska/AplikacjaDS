@@ -76,6 +76,16 @@ app.layout = html.Div([
                                                                   ['Manual', 'Automatic'])]
             )
         ], style={'width': '20%', 'textAlign': 'left'}),
+
+        html.Div([
+            html.Hr(),
+            html.H3('Predykcja na podstawie modelu'),
+            html.Hr(),
+            html.H4('Podałeś parametry: '),
+            html.Div(id='div-1'),
+            html.Div(id='div-2'),
+            html.Hr()
+        ], style={'margin': '0 auto', 'textAlign': 'center'})
     ], style={'width': '80%', 'textAlign': 'left', 'margin': '0 auto', 'fontSize': 22})
 ])
 
