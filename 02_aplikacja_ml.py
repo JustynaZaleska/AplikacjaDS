@@ -57,8 +57,16 @@ app.layout = html.Div([
                 id='dropdown-1',
                 options=[{'label': i, 'value': i} for i in [2, 4, 5, 6, 7, 8, 9, 10]]
             )
+        ], style={'width': '20%', 'textAlign': 'left'}),
+        html.Br(),
+        html.Label('Podaj typ paliwa:'),
+        html.Div([
+            dcc.Dropdown(
+                id='dropdown-2',
+                options=[{'label': i, 'value': i} for i, j in zip(['Diesel', 'Benzyna', 'CNG', 'LPG', 'Elektryczny'],
+                                                                 ['Diesel', 'Petrol', 'CNG', 'LPG', 'Electric'])]
+            )
         ], style={'width': '20%', 'textAlign': 'left'})
-
     ], style={'width': '80%', 'textAlign': 'left', 'margin': '0 auto', 'fontSize': 22})
 ])
 
