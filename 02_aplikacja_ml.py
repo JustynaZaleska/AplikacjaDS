@@ -66,7 +66,16 @@ app.layout = html.Div([
                 options=[{'label': i, 'value': i} for i, j in zip(['Diesel', 'Benzyna', 'CNG', 'LPG', 'Elektryczny'],
                                                                  ['Diesel', 'Petrol', 'CNG', 'LPG', 'Electric'])]
             )
-        ], style={'width': '20%', 'textAlign': 'left'})
+        ], style={'width': '20%', 'textAlign': 'left'}),
+        html.Br(),
+        html.Label('Podaj typ przekładni:'),
+        html.Div([
+            dcc.Dropdown(
+                id='dropdown-3',
+                options=[{'label': i, 'value': i} for i, j in zip(['Manualna', 'Autmatyczna'],
+                                                                  ['Manual', 'Automatic'])]
+            )
+        ], style={'width': '20%', 'textAlign': 'left'}),
     ], style={'width': '80%', 'textAlign': 'left', 'margin': '0 auto', 'fontSize': 22})
 ])
 
